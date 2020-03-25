@@ -1,0 +1,27 @@
+name: 'Twigcs'
+description: 'A GitHub Action that runs Twigcs on a repository.'
+author: 'DirtDiglett'
+
+branding:
+  icon: 'eye'
+  color: 'orange'
+
+inputs:
+  dir:
+    description: 'Folder to check code style'
+    required: false
+    default: .
+  severity_tolerance:
+    description: 'What level of exit code should be tolerated'
+    required: false
+  ignore_folder:
+    description: 'Ignore subfolders that match name'
+    required: false
+    
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.dir }}
+    - ${{ inputs.severity_tolerance }}
+    - ${{ inputs.ignore_folder }}

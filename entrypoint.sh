@@ -18,4 +18,6 @@ fi
 #    options+=(--exclude "$INPUT_IGNORE_FOLDER")
 #fi
 
-twigcs $INPUT_DIR "${options[@]}"
+#twigcs $INPUT_DIR "${options[@]}"
+twigcs -h
+twigcs -V

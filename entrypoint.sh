@@ -19,4 +19,5 @@ fi
 #    options+=(--exclude "$INPUT_IGNORE_FOLDER")
 #fi
 
+echo "${INPUT_DIR} and ${options[@]}"
 twigcs $INPUT_DIR "${options[@]}"

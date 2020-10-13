@@ -8,16 +8,14 @@ echo "=   Running TwigCS   ="
 echo "======================"
 echo "PHP Version : ${PHP_FULL_VERSION}"
 echo "======================"
-echo "= Severity : ${INPUT_SEVERITY_TOLERANCE}"
-echo "= Exclude : ${INPUT_IGNORE_FOLDER}"
+echo "Severity : ${INPUT_SEVERITY_TOLERANCE}"
 
 if [[ -n "$INPUT_SEVERITY_TOLERANCE" ]]; then
-    options+=(--severity "$INPUT_SEVERITY_TOLERANCE")
+    options+=(--severity="$INPUT_SEVERITY_TOLERANCE")
 fi
 
 #if [[ -n "$INPUT_IGNORE_FOLDER" ]]; then
 #    options+=(--exclude "$INPUT_IGNORE_FOLDER")
 #fi
 
-echo "${INPUT_DIR} and ${options[@]}"
 twigcs $INPUT_DIR "${options[@]}"

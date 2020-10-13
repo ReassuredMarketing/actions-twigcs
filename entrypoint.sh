@@ -12,8 +12,8 @@ if [[ -n "$INPUT_SEVERITY_TOLERANCE" ]]; then
     options+=(--severity "$INPUT_SEVERITY_TOLERANCE")
 fi
 
-if [[ -n "$INPUT_IGNORE_FOLDER" ]]; then
-    options+=(--exclude "$INPUT_IGNORE_FOLDER")
-fi
+#if [[ -n "$INPUT_IGNORE_FOLDER" ]]; then
+#    options+=(--exclude "$INPUT_IGNORE_FOLDER")
+#fi
 
 twigcs $INPUT_DIR "${options[@]}"

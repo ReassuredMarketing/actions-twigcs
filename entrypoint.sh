@@ -19,5 +19,4 @@ fi
 #fi
 
 #twigcs $INPUT_DIR "${options[@]}"
-twigcs -h
-twigcs -V
+twigcs -n --severity=error ./templates
